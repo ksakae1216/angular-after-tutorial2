@@ -1,10 +1,21 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { User } from './user';
 
 @Component({
-  selector: 'app-root',
+  selector: 'my-app',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-after-tutorial2';
+
+  users: User[] = [];
+
+  constructor(private http: HttpClient) { }
+
+  ngOnInit() {
+    this.http.get<{ data: User[] }>('https://reqres.in/api/users').subscribe(resp => {
+      this.users = resp.data;
+    });
+  }
 }
