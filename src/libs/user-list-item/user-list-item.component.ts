@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input, OnInit } from '@angular/core';
 import { User } from 'src/app/user';
 
 @Component({
@@ -7,7 +7,9 @@ import { User } from 'src/app/user';
   styleUrls: ['./user-list-item.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class UserListItemComponent {
+export class UserListItemComponent implements OnInit {
+
+  ngOnInit() {}
 
   @Input()
   user!: User;
