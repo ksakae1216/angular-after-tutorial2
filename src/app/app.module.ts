@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 import { UserListComponent } from '../libs/user-list/user-list.component';
 import { UserListItemComponent } from '../libs/user-list-item/user-list-item.component';
 import { UserListFilterComponent } from '../libs/user-list-filter/user-list-filter.component';
@@ -21,6 +22,7 @@ import { UserDetailPageComponent } from '../libs/user-detail-page/user-detail-pa
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

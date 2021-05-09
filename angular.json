@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist/angular-after-tutorial2",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -54,6 +55,10 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
                 }
               ]
             }
@@ -136,5 +141,8 @@
       }
     }
   },
-  "defaultProject": "angular-after-tutorial2"
+  "defaultProject": "angular-after-tutorial2",
+  "cli": {
+    "analytics": "2ae5ba81-6b1d-4158-b2a3-98c0825c7b13"
+  }
 }
